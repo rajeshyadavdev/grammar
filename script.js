@@ -39,3 +39,32 @@ const closeNav = ()=>{
 }
 
 closeBtn.addEventListener('click',closeNav)
+
+
+
+const toggleBtn = document.querySelector('#darklight-mode');
+
+// Apply saved theme on load
+const savedTheme = localStorage.getItem("theme") || "dark";
+
+if (savedTheme === "light") {
+  document.body.classList.add("light-theme");
+  toggleBtn.innerHTML = "<i class='uil uil-moon'></i>"; // switch to dark
+} else {
+  document.body.classList.remove("light-theme");
+  toggleBtn.innerHTML = "<i class='uil uil-brightness'></i>"; // switch to light
+}
+
+// Toggle theme on click
+toggleBtn.addEventListener("click", () => {
+  document.body.classList.toggle("light-theme");
+
+  if (document.body.classList.contains("light-theme")) {
+    toggleBtn.innerHTML = "<i class='uil uil-moon'></i>";
+    localStorage.setItem("theme", "light");
+  } else {
+    toggleBtn.innerHTML = "<i class='uil uil-brightness'></i>";
+    localStorage.setItem("theme", "dark");
+  }
+});
+
