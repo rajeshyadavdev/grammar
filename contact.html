@@ -122,7 +122,11 @@
       </div>
     </div>
     <div class="footer__copyright">
-      <small>Copyright @RajeshYadav</small>
+      <small class="copyright">
+        <script>
+          document.querySelector(".copyright").innerHTML = `Copyright @Rajesh Yadav ${new Date().getFullYear()}`
+        </script>
+      </small>
     </div>
   </footer>
   <!-- ========= Footer End ========= -->

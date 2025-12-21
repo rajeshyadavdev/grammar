@@ -11,7 +11,7 @@
   <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.2.0/css/line.css">
 
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
-  
+
   <link rel="icon" href="favicon.ico" type="image/x-icon">
 </head>
 
@@ -233,7 +233,11 @@
       </div>
     </div>
     <div class="footer__copyright">
-      <small>Copyright @RajeshYadav</small>
+      <small class="copyright">
+        <script>
+          document.querySelector(".copyright").innerHTML = `Copyright @Rajesh Yadav ${new Date().getFullYear()}`
+        </script>
+      </small>
     </div>
   </footer>
   <!-- ========= Footer End ========= -->
